@@ -1,0 +1,18 @@
+
+
+.sticky-button {
+  border: 0;
+  margin: 0;
+  padding: 0.3em 0.4em;
+  background-color: var(--color-yellow);  
+  font-family: var(--font-ostwald);
+  font-size: 1rem;
+  color: var(--color-brown);
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--color-red);
+    color: var(--color-light);
+  }
+}
+

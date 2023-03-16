@@ -1,0 +1,120 @@
+.sticky-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.sticky-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1em 0;
+}
+
+.sticky-footer {
+  position: sticky;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  flex-shrink: 0;
+}
+
+.sticky-main {
+  flex: 1 0 auto;
+  padding-right: 12rem;
+}
+
+.sticky-menu {
+  position: fixed;
+  right: 0;
+}
+
+.sticky-button {
+  border: 0;
+  margin: 0;
+  padding: 0.2em 0.3em;
+}
+
+.sticky-container {
+  --font-baloo: "Baloo Chettan 2", "Consolas", "Monaco", "Andale Mono", "Ubuntu Mono", monospace;
+  --font-ostwald: "Oswald", "Impact", "Roboto Condensed", Arial, sans-serif;
+}
+
+.sticky-main {
+  text-align: justify;
+}
+
+.sticky-footer p,
+.sticky-header h3 {
+  font-family: var(--font-baloo);
+  font-weight: 600;
+  font-size: 2rem;
+  text-align: center;
+}
+
+@media only screen and (min-width: 48em) {
+  .sticky-footer p,
+  .sticky-header h3 {
+    font-size: 2.5rem;
+  }
+}
+@media only screen and (min-width: 62em) {
+  .sticky-footer p,
+  .sticky-header h3 {
+    font-size: 3rem;
+  }
+}
+.sticky-container {
+  --color-blue: hsla(195, 72%, 45%, 1);
+  --color-red: hsl(353, 72%, 45%);
+  --color-yellow: hsl(37, 73%, 45%);
+  --color-light: hsl(37, 100%, 93%);
+  --color-green: hsl(117, 27%, 41%);
+  --color-brown: hsl(353, 100%, 6%);
+}
+
+.sticky-container {
+  background-color: var(--color-light);
+  color: var(--color-yellow);
+}
+
+.sticky-main {
+  background: url("/images/botanist-transparent2.png") 50% 50%/contain no-repeat fixed;
+}
+
+.sticky-header {
+  background-color: var(--color-red);
+  color: var(--color-blue);
+}
+
+.sticky-footer {
+  background-color: var(--color-blue);
+  color: var(--color-red);
+}
+
+.sticky-menu__inner {
+  background-color: var(--color-green);
+  padding: 0.5em;
+  width: 10em;
+}
+.sticky-menu__inner a {
+  color: var(--color-light);
+}
+
+.sticky-button {
+  border: 0;
+  margin: 0;
+  padding: 0.3em 0.4em;
+  background-color: var(--color-yellow);
+  font-family: var(--font-ostwald);
+  font-size: 1rem;
+  color: var(--color-brown);
+  cursor: pointer;
+}
+.sticky-button:hover {
+  background-color: var(--color-red);
+  color: var(--color-light);
+}
+
+/*# sourceMappingURL=style_sticky-header-footer.css.map */
