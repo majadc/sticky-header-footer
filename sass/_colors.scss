@@ -1,16 +1,15 @@
 .sticky-container {
-  --color-blue: hsla(195, 72%, 45%, 1);
-  --color-red: hsl(353, 72%, 45%);
-  --color-yellow: hsl(37, 73%, 45%);
-  --color-light: hsl(37, 100%, 93%);
-  --color-green: hsl(117, 27%, 41%);
-  --color-brown: hsl(353, 100%, 6%);
-}
+  --color-blue: hsl(195deg 72% 45%);
+  --color-red: hsl(353deg 72% 45%);
+  --color-yellow: hsl(37deg 73% 45%);
+  --color-light: hsl(37deg 100% 93%);
+  --color-green: hsl(117deg 27% 41%);
+  --color-brown: hsl(353deg 100% 6%);
 
-.sticky-container {
   background-color: var(--color-light);
-  color: var(--color-yellow)
-}
+  color: var(--color-yellow);
+
+} 
 
 .sticky-main {
   background: url("/images/botanist-transparent2.png") 50% 50%/contain no-repeat fixed;
