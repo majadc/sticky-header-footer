@@ -15,7 +15,7 @@ document.getElementById('stickyButton').addEventListener("click", function() {
   ]
 
   const node = document.createElement("p");
-  const textnode = document.createTextNode(cupcakeIpsum[Math.floor(Math.random()*5)]);
+  const textnode = document.createTextNode(cupcakeIpsum[Math.floor(Math.random()*7)]);
   node.appendChild(textnode);
   stickyMain.appendChild(node);
 
