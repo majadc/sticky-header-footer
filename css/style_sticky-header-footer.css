@@ -1,2 +1,172 @@
-.sticky-container{display:flex;flex-direction:column;min-height:100vh}.sticky-header{position:sticky;top:0;left:0;right:0;padding:1em 0}.sticky-footer{position:sticky;left:0;right:0;bottom:0;flex-shrink:0}.sticky-main{flex:1 0 auto;padding-right:12.5rem}.sticky-menu{position:fixed;right:0}.sticky-button{border:0;margin:0;padding:.2em .3em}.sticky-container{--font-baloo:"Baloo Chettan 2","Consolas","Monaco","Andale Mono","Ubuntu Mono",monospace;--font-ostwald:"Oswald","Impact","Roboto Condensed",arial,sans-serif}.sticky-main{text-align:justify}.sticky-footer p,.sticky-header h3{font-family:var(--font-baloo);font-weight:600;font-size:2rem;text-align:center}@media only screen and (min-width:48em){.sticky-footer p,.sticky-header h3{font-size:2.5rem}}@media only screen and (min-width:62em){.sticky-footer p,.sticky-header h3{font-size:3rem}}.sticky-container{--color-blue:hsl(195deg 72% 45%);--color-red:hsl(353deg 72% 45%);--color-yellow:hsl(37deg 73% 45%);--color-light:hsl(37deg 100% 93%);--color-green:hsl(117deg 27% 41%);--color-brown:hsl(353deg 100% 6%);--color-black:hsl(0, 0%, 0%);--color-white:hsl(0, 0%, 100%);background-color:var(--color-light);color:var(--color-yellow)}.sticky-main{background:url("/images/botanist-transparent2.png") 50% 50%/contain no-repeat fixed}.sticky-header{background-color:var(--color-red);color:var(--color-blue)}.sticky-footer{background-color:var(--color-blue);color:var(--color-red)}.sticky-menu a{color:var(--color-light)}.sticky-menu a:hover{color:var(--color-brown)}.sticky-menu__inner{background-color:var(--color-green);padding:.5em;width:10em}.sticky-button{display:flex;align-items:center;justify-content:center;position:relative;border:0;margin:0;width:100%;background-color:var(--color-yellow);font-family:var(--font-ostwald);font-size:1rem;color:var(--color-light);cursor:pointer}.sticky-button .sticky-button__icon{display:block;width:1.5em;height:1.5em;fill:var(--color-red);position:relative;z-index:7;transition:fill .5s}.sticky-button span{display:block;position:relative;z-index:8;padding-left:.2em}.sticky-button::before{content:"";width:100%;height:100%;top:0;right:0;position:absolute;z-index:5;background-color:var(--color-brown);transform:scalex(0);transform-origin:right;transition:transform .2s,width .4s cubic-bezier(0, 1.22, .86, .99) .2s,background-color .1s}.sticky-button:hover::before{transform:scale(1)}.sticky-button:hover .sticky-button__icon{fill:var(--color-light)}.sticky-button:active{color:var(--color-white)}.sticky-button:active::before{background-color:var(--color-black)}.sticky-button:active .sticky-button__icon{fill:var(--color-white)}@media only screen and (min-width:62em){.sticky-button{font-size:1.2rem}}
-/*# sourceMappingURL=style_sticky-header-footer.css.map */
+.sticky-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.sticky-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1em 0;
+}
+
+.sticky-footer {
+  position: sticky;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  flex-shrink: 0;
+}
+
+.sticky-main {
+  flex: 1 0 auto;
+  padding-right: 12.5rem;
+}
+
+.sticky-menu {
+  position: fixed;
+  right: 0;
+}
+
+.sticky-button {
+  border: 0;
+  margin: 0;
+  padding: 0.2em 0.3em;
+}
+
+.sticky-container {
+  --font-baloo: "Baloo Chettan 2", "Consolas", "Monaco", "Andale Mono", "Ubuntu Mono", monospace;
+  --font-ostwald: "Oswald", "Impact", "Roboto Condensed", arial, sans-serif;
+}
+
+.sticky-main {
+  text-align: justify;
+}
+
+.sticky-footer p,
+.sticky-header h3 {
+  font-family: var(--font-baloo);
+  font-weight: 600;
+  font-size: 2rem;
+  text-align: center;
+}
+
+@media only screen and (min-width: 48em) {
+  .sticky-footer p,
+  .sticky-header h3 {
+    font-size: 2.5rem;
+  }
+}
+@media only screen and (min-width: 62em) {
+  .sticky-footer p,
+  .sticky-header h3 {
+    font-size: 3rem;
+  }
+}
+.sticky-container {
+  --color-blue: hsl(195deg 72% 45%);
+  --color-red: hsl(353deg 72% 45%);
+  --color-yellow: hsl(37deg 73% 45%);
+  --color-light: hsl(37deg 100% 93%);
+  --color-green: hsl(117deg 27% 41%);
+  --color-brown: hsl(353deg 100% 6%);
+  --color-black: hsl(0deg 0% 0%);
+  --color-white: hsl(0deg 0% 100%);
+  background-color: var(--color-light);
+  color: var(--color-yellow);
+}
+
+.sticky-main {
+  background: url("/images/botanist-transparent2.png") 50% 50%/contain no-repeat fixed;
+}
+
+.sticky-header {
+  background-color: var(--color-red);
+  color: var(--color-blue);
+}
+
+.sticky-footer {
+  background-color: var(--color-blue);
+  color: var(--color-red);
+}
+
+.sticky-menu a {
+  color: var(--color-light);
+}
+.sticky-menu a:hover {
+  color: var(--color-brown);
+}
+
+.sticky-menu__inner {
+  background-color: var(--color-green);
+  padding: 0.5em;
+  width: 10em;
+}
+
+.sticky-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border: 0;
+  margin: 0;
+  width: 100%;
+  background-color: var(--color-yellow);
+  font-family: var(--font-ostwald);
+  font-size: 1rem;
+  color: var(--color-light);
+  cursor: pointer;
+}
+.sticky-button .sticky-button__icon {
+  display: block;
+  width: 1.5em;
+  height: 1.5em;
+  fill: var(--color-red);
+  position: relative;
+  z-index: 7;
+  transition: fill 0.5s;
+}
+.sticky-button span {
+  display: block;
+  position: relative;
+  z-index: 8;
+  padding-left: 0.2em;
+}
+.sticky-button::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  position: absolute;
+  z-index: 5;
+  background-color: var(--color-brown);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.2s, width 0.4s cubic-bezier(0, 1.22, 0.86, 0.99) 0.2s, background-color 0.1s;
+}
+.sticky-button:hover::before {
+  transform: scale(1);
+}
+.sticky-button:hover .sticky-button__icon {
+  fill: var(--color-light);
+}
+.sticky-button:active {
+  color: var(--color-white);
+}
+.sticky-button:active::before {
+  background-color: var(--color-black);
+}
+.sticky-button:active .sticky-button__icon {
+  fill: var(--color-white);
+}
+
+@media only screen and (min-width: 62em) {
+  .sticky-button {
+    font-size: 1.2rem;
+  }
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3Nhc3MvX2xheW91dC5zY3NzIiwic3R5bGVfc3RpY2t5LWhlYWRlci1mb290ZXIuY3NzIiwiLi4vc2Fzcy9fdHlwb2dyYXBoeS5zY3NzIiwiLi4vc2Fzcy9fbWl4aW5zLnNjc3MiLCIuLi9zYXNzL19jb2xvcnMuc2NzcyIsIi4uL3Nhc3MvX3N0aWNreS1idXR0b24uc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFFQTtFQUNFLGFBQUE7RUFDQSxzQkFBQTtFQUNBLGlCQUFBO0FDREY7O0FESUE7RUFDRSxnQkFBQTtFQUNBLE1BQUE7RUFDQSxPQUFBO0VBQ0EsUUFBQTtFQUNBLGNBQUE7QUNERjs7QURJQTtFQUNFLGdCQUFBO0VBQ0EsT0FBQTtFQUNBLFFBQUE7RUFDQSxTQUFBO0VBQ0EsY0FBQTtBQ0RGOztBRElBO0VBQ0UsY0FBQTtFQUNBLHNCQUFBO0FDREY7O0FESUE7RUFDRSxlQUFBO0VBQ0EsUUFBQTtBQ0RGOztBRElBO0VBQ0UsU0FBQTtFQUNBLFNBQUE7RUFDQSxvQkFBQTtBQ0RGOztBQ3BDQTtFQUNFLDhGQUFBO0VBQ0EseUVBQUE7QUR1Q0Y7O0FDcENBO0VBQ0UsbUJBQUE7QUR1Q0Y7O0FDcENBOztFQUVFLDhCQUFBO0VBQ0EsZ0JBQUE7RUFDQSxlQUFBO0VBQ0Esa0JBQUE7QUR1Q0Y7O0FFbENRO0VEQ047O0lBRUUsaUJBQUE7RURxQ0Y7QUFDRjtBRXpDUTtFRFNOOztJQUVFLGVBQUE7RURtQ0Y7QUFDRjtBR2xFQTtFQUNFLGlDQUFBO0VBQ0EsZ0NBQUE7RUFDQSxrQ0FBQTtFQUNBLGtDQUFBO0VBQ0Esa0NBQUE7RUFDQSxrQ0FBQTtFQUNBLDhCQUFBO0VBQ0EsZ0NBQUE7RUFFQSxvQ0FBQTtFQUNBLDBCQUFBO0FIbUVGOztBRy9EQTtFQUNFLG9GQUFBO0FIa0VGOztBRy9EQTtFQUNFLGtDQUFBO0VBQ0Esd0JBQUE7QUhrRUY7O0FHL0RBO0VBQ0UsbUNBQUE7RUFDQSx1QkFBQTtBSGtFRjs7QUc5REU7RUFDRSx5QkFBQTtBSGlFSjtBRzlERTtFQUNFLHlCQUFBO0FIZ0VKOztBRzVEQTtFQUNFLG9DQUFBO0VBQ0EsY0FBQTtFQUNBLFdBQUE7QUgrREY7O0FJekdBO0VBQ0UsYUFBQTtFQUNBLG1CQUFBO0VBQ0EsdUJBQUE7RUFDQSxrQkFBQTtFQUNBLFNBQUE7RUFDQSxTQUFBO0VBQ0EsV0FBQTtFQUNBLHFDQUFBO0VBQ0EsZ0NBQUE7RUFDQSxlQUFBO0VBQ0EseUJBQUE7RUFDQSxlQUFBO0FKNEdGO0FJMUdFO0VBQ0UsY0FBQTtFQUNBLFlBQUE7RUFDQSxhQUFBO0VBQ0Esc0JBQUE7RUFDQSxrQkFBQTtFQUNBLFVBQUE7RUFDQSxxQkFBQTtBSjRHSjtBSXpHRTtFQUNFLGNBQUE7RUFDQSxrQkFBQTtFQUNBLFVBQUE7RUFDQSxtQkFBQTtBSjJHSjtBSXhHRTtFQUNFLFdBQUE7RUFDQSxXQUFBO0VBQ0EsWUFBQTtFQUNBLE1BQUE7RUFDQSxRQUFBO0VBQ0Esa0JBQUE7RUFDQSxVQUFBO0VBQ0Esb0NBQUE7RUFDQSxvQkFBQTtFQUNBLHVCQUFBO0VBQ0Esb0dBQUE7QUowR0o7QUlyR0U7RUFDRSxtQkFBQTtBSnVHSjtBSXBHRTtFQUNFLHdCQUFBO0FKc0dKO0FJbkdFO0VBQ0UseUJBQUE7QUpxR0o7QUlsR0U7RUFDRSxvQ0FBQTtBSm9HSjtBSWpHRTtFQUNFLHdCQUFBO0FKbUdKOztBRWhKUTtFRWtETjtJQUNFLGlCQUFBO0VKa0dGO0FBQ0YiLCJmaWxlIjoic3R5bGVfc3RpY2t5LWhlYWRlci1mb290ZXIuY3NzIn0= */

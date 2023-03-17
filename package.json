@@ -9,8 +9,9 @@
     "watch:sass": "sass --watch sass/style.scss:css/style_sticky-header-footer.css",
     "compile:sass": "sass sass/style.scss css/style_sticky-header-footer.css",
     "prefix:css": "postcss css/style_sticky-header-footer.css --use autoprefixer -o css/style_sticky-header-footer.css",
-    "compress:css": "cleancss --source-map -o css/style_sticky-header-footer.css css/style_sticky-header-footer.css",
-    "build:css": "npm-run-all compile:sass  prefix:css compress:css"
+    "build:css": "npm-run-all compile:sass  prefix:css",
+    "compress:css": "cleancss --source-map -o css/style_sticky-header-footer.css css/style_sticky-header-footer.css"
+    
   },
   "keywords": [],
   "author": "",
