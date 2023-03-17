@@ -2,28 +2,25 @@
 
 // if 1rem = 16px => { 576px = 36em; 768px = 48em; 992px = 62em; 1200px = 75em; }
 $media-queries-up: (
-    'small': (
-        "breakpoint": '(min-width: 36em)',
-    ),
-    'medium': (
-        "breakpoint": '(min-width: 48em)',
-    ),
-    'large': (
-        "breakpoint": '(min-width: 62em)',
+  'small': ("breakpoint": '(min-width: 36em)',
   ),
-    'xlarge': (
-        "breakpoint": '(min-width: 75em)',
-    )
+  'medium': ("breakpoint": '(min-width: 48em)',
+  ),
+  'large': ("breakpoint": '(min-width: 62em)',
+  ),
+  'xlarge': ("breakpoint": '(min-width: 75em)',
+  )
 );
 
 @mixin media-query-up($size) {
-  @each $item, $value in $media-queries-up {
-      @if $item == $size {
-          @if map-get($value, "breakpoint") {
-              @media only screen and #{map-get($value, "breakpoint")} {
-                  @content;
-              }
-          }
+  @each $item,
+  $value in $media-queries-up {
+    @if $item == $size {
+      @if map-get($value, "breakpoint") {
+        @media only screen and #{map-get($value, "breakpoint")} {
+          @content;
+        }
       }
+    }
   }
 }

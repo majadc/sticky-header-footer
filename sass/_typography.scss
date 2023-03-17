@@ -17,6 +17,7 @@
 
 
 @include media-query-up (medium) {
+
   .sticky-footer p,
   .sticky-header h3 {
     font-size: 2.5rem;
@@ -24,6 +25,7 @@
 }
 
 @include media-query-up (large) {
+
   .sticky-footer p,
   .sticky-header h3 {
     font-size: 3rem;

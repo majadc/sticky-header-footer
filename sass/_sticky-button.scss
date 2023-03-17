@@ -1,18 +1,74 @@
-
-
 .sticky-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
   border: 0;
   margin: 0;
-  padding: 0.3em 0.4em;
-  background-color: var(--color-yellow);  
+  width: 100%;
+  background-color: var(--color-yellow);
   font-family: var(--font-ostwald);
   font-size: 1rem;
-  color: var(--color-brown);
+  color: var(--color-light);
   cursor: pointer;
 
-  &:hover {
-    background-color: var(--color-red);
-    color: var(--color-light);
+  .sticky-button__icon {
+    display: block;
+    width: 1.5em;
+    height: 1.5em;
+    fill: var(--color-red);
+    position: relative;
+    z-index: 7;
+    transition: fill .5s;
+  }
+
+  span {
+    display: block;
+    position: relative;
+    z-index: 8;
+    padding-left: 0.2em;
+  }
+
+  &::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    position: absolute;
+    z-index: 5;
+    background-color: var(--color-brown);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .2s,
+      width .4s cubic-bezier(0, 1.22, .86, .99) .2s,
+      background-color .1s;
+  }
+
+  &:hover::before {
+    transform: scale(1);
+  }
+
+  &:hover .sticky-button__icon {
+    fill: var(--color-light);
+  }
+
+  &:active {
+    color: var(--color-white);
+  }
+
+  &:active::before {
+    background-color: var(--color-black);
+  }
+
+  &:active .sticky-button__icon {
+    fill: var(--color-white);
   }
 }
 
+@include media-query-up (large) {
+  .sticky-button {
+    font-size: 1.2rem;
+
+  }
+}

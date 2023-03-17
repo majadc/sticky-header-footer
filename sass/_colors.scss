@@ -5,11 +5,13 @@
   --color-light: hsl(37deg 100% 93%);
   --color-green: hsl(117deg 27% 41%);
   --color-brown: hsl(353deg 100% 6%);
+  --color-black: hsl(0deg 0% 0%);
+  --color-white: hsl(0deg 0% 100%);
 
   background-color: var(--color-light);
   color: var(--color-yellow);
 
-} 
+}
 
 .sticky-main {
   background: url("/images/botanist-transparent2.png") 50% 50%/contain no-repeat fixed;
@@ -25,13 +27,18 @@
   color: var(--color-red);
 }
 
+.sticky-menu {
+  a {
+    color: var(--color-light);
+  }
+
+  a:hover {
+    color: var(--color-brown);
+  }
+}
+
 .sticky-menu__inner {
   background-color: var(--color-green);
   padding: 0.5em;
   width: 10em;
-  a {
-    color: var(--color-light);
-  }
 }
-
-
