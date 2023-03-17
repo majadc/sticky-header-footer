@@ -2,8 +2,7 @@
 * Colors for the project
 ***************************************************************
 */ 
-
-.sticky-container {
+:root {
   --color-blue: hsl(195deg 72% 45%);
   --color-red: hsl(353deg 72% 45%);
   --color-yellow: hsl(37deg 73% 45%);
@@ -18,8 +17,10 @@
 
 }
 
+
+
 .sticky-main {
-  background: url("/images/botanist-transparent2.png") 50% 50%/contain no-repeat fixed;
+  background: url("../images/botanist-transparent2.png") 50% 50%/contain no-repeat fixed;
 }
 
 .sticky-header {

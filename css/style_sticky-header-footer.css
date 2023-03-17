@@ -1,3 +1,13 @@
+:root {
+  box-sizing: border-box;
+}
+
+*, ::after, ::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
 /**************************************************************
 * Layout
 ***************************************************************
@@ -44,9 +54,43 @@
 * Typography
 ***************************************************************
 */
-.sticky-container {
+:root {
   --font-baloo: "Baloo Chettan 2", "Consolas", "Monaco", "Andale Mono", "Ubuntu Mono", monospace;
   --font-ostwald: "Oswald", "Impact", "Roboto Condensed", arial, sans-serif;
+  --font-raleway: "Raleway", "Open Sans", Tahoma, "Geneva", Arial, sans-serif;
+  --font-size-small: 1rem;
+  --font-size-medium: 1.1rem;
+  --font-size-large: 1.2rem;
+  --font-size-title-small: 2rem;
+  --font-size-title-medium: 2.5rem;
+  --font-size-title-large: 3rem;
+  --line-height: 1.6;
+  --font-weight-normal: 400;
+  --font-weight-semibold: 600;
+  --gutter: 1em;
+  --gutter-big: 1.5em;
+  --gutter-between: var(--gutter) 0 var(--gutter-big) 0;
+}
+
+body {
+  font: normal normal var(--font-weight-normal) var(--font-size-small)/var(--line-height) var(--font-raleway);
+  vertical-align: baseline;
+}
+
+a {
+  text-decoration: underline;
+}
+a:hover {
+  text-decoration: none;
+}
+
+p {
+  margin: var(--gutter-between);
+}
+
+ul,
+li {
+  list-style: none;
 }
 
 .sticky-main {
@@ -56,28 +100,35 @@
 .sticky-footer p,
 .sticky-header h3 {
   font-family: var(--font-baloo);
-  font-weight: 600;
-  font-size: 2rem;
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-title-small);
   text-align: center;
+  margin: 0;
 }
 
 @media only screen and (min-width: 48em) {
+  body {
+    font-size: var(--font-size-medium);
+  }
   .sticky-footer p,
   .sticky-header h3 {
-    font-size: 2.5rem;
+    font-size: var(--font-size-title-medium);
   }
 }
 @media only screen and (min-width: 62em) {
+  body {
+    font-size: var(--font-size-large);
+  }
   .sticky-footer p,
   .sticky-header h3 {
-    font-size: 3rem;
+    font-size: var(--font-size-title-large);
   }
 }
 /**************************************************************
 * Colors for the project
 ***************************************************************
 */
-.sticky-container {
+:root {
   --color-blue: hsl(195deg 72% 45%);
   --color-red: hsl(353deg 72% 45%);
   --color-yellow: hsl(37deg 73% 45%);
@@ -91,7 +142,7 @@
 }
 
 .sticky-main {
-  background: url("/images/botanist-transparent2.png") 50% 50%/contain no-repeat fixed;
+  background: url("../images/botanist-transparent2.png") 50% 50%/contain no-repeat fixed;
 }
 
 .sticky-header {
@@ -181,4 +232,4 @@
   }
 }
 
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3Nhc3MvX2xheW91dC5zY3NzIiwic3R5bGVfc3RpY2t5LWhlYWRlci1mb290ZXIuY3NzIiwiLi4vc2Fzcy9fdHlwb2dyYXBoeS5zY3NzIiwiLi4vc2Fzcy9fbWl4aW5zLnNjc3MiLCIuLi9zYXNzL19jb2xvcnMuc2NzcyIsIi4uL3Nhc3MvX3N0aWNreS1idXR0b24uc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7O0NBQUE7QUFJQTtFQUNFLGFBQUE7RUFDQSxzQkFBQTtFQUNBLGlCQUFBO0FDQ0Y7O0FERUE7RUFDRSxnQkFBQTtFQUNBLE1BQUE7RUFDQSxPQUFBO0VBQ0EsUUFBQTtFQUNBLGNBQUE7QUNDRjs7QURFQTtFQUNFLGdCQUFBO0VBQ0EsT0FBQTtFQUNBLFFBQUE7RUFDQSxTQUFBO0VBQ0EsY0FBQTtBQ0NGOztBREVBO0VBQ0UsY0FBQTtFQUNBLHNCQUFBO0FDQ0Y7O0FERUE7RUFDRSxlQUFBO0VBQ0EsUUFBQTtBQ0NGOztBREVBO0VBQ0UsU0FBQTtFQUNBLFNBQUE7RUFDQSxvQkFBQTtBQ0NGOztBQ3hDQTs7O0NBQUE7QUFJQTtFQUNFLDhGQUFBO0VBQ0EseUVBQUE7QUQyQ0Y7O0FDeENBO0VBQ0UsbUJBQUE7QUQyQ0Y7O0FDeENBOztFQUVFLDhCQUFBO0VBQ0EsZ0JBQUE7RUFDQSxlQUFBO0VBQ0Esa0JBQUE7QUQyQ0Y7O0FFMUNRO0VES047O0lBRUUsaUJBQUE7RUR5Q0Y7QUFDRjtBRWpEUTtFRGFOOztJQUVFLGVBQUE7RUR1Q0Y7QUFDRjtBRzFFQTs7O0NBQUE7QUFLQTtFQUNFLGlDQUFBO0VBQ0EsZ0NBQUE7RUFDQSxrQ0FBQTtFQUNBLGtDQUFBO0VBQ0Esa0NBQUE7RUFDQSxrQ0FBQTtFQUNBLDhCQUFBO0VBQ0EsZ0NBQUE7RUFFQSxvQ0FBQTtFQUNBLDBCQUFBO0FIMEVGOztBR3RFQTtFQUNFLG9GQUFBO0FIeUVGOztBR3RFQTtFQUNFLGtDQUFBO0VBQ0Esd0JBQUE7QUh5RUY7O0FHdEVBO0VBQ0UsbUNBQUE7RUFDQSx1QkFBQTtBSHlFRjs7QUdyRUU7RUFDRSx5QkFBQTtBSHdFSjtBR3JFRTtFQUNFLHlCQUFBO0FIdUVKOztBR25FQTtFQUNFLG9DQUFBO0VBQ0EsY0FBQTtFQUNBLFdBQUE7QUhzRUY7O0FJckhBO0VBQ0UsYUFBQTtFQUNBLG1CQUFBO0VBQ0EsdUJBQUE7RUFDQSxrQkFBQTtFQUNBLFNBQUE7RUFDQSxTQUFBO0VBQ0EsV0FBQTtFQUNBLHFDQUFBO0VBQ0EsZ0NBQUE7RUFDQSxlQUFBO0VBQ0EseUJBQUE7RUFDQSxlQUFBO0FKd0hGO0FJdEhFO0VBQ0UsY0FBQTtFQUNBLFlBQUE7RUFDQSxhQUFBO0VBQ0Esc0JBQUE7RUFDQSxrQkFBQTtFQUNBLFVBQUE7RUFDQSxxQkFBQTtBSndISjtBSXJIRTtFQUNFLGNBQUE7RUFDQSxrQkFBQTtFQUNBLFVBQUE7RUFDQSxtQkFBQTtBSnVISjtBSXBIRTtFQUNFLFdBQUE7RUFDQSxXQUFBO0VBQ0EsWUFBQTtFQUNBLE1BQUE7RUFDQSxRQUFBO0VBQ0Esa0JBQUE7RUFDQSxVQUFBO0VBQ0Esb0NBQUE7RUFDQSxvQkFBQTtFQUNBLHVCQUFBO0VBQ0Esb0dBQUE7QUpzSEo7QUlqSEU7RUFDRSxtQkFBQTtBSm1ISjtBSWhIRTtFQUNFLHdCQUFBO0FKa0hKO0FJL0dFO0VBQ0UseUJBQUE7QUppSEo7QUk5R0U7RUFDRSxvQ0FBQTtBSmdISjtBSTdHRTtFQUNFLHdCQUFBO0FKK0dKOztBRTVKUTtFRWtETjtJQUNFLGlCQUFBO0VKOEdGO0FBQ0YiLCJmaWxlIjoic3R5bGVfc3RpY2t5LWhlYWRlci1mb290ZXIuY3NzIn0= */
+/*# sourceMappingURL=style_sticky-header-footer.css.map */

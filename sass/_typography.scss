@@ -1,10 +1,60 @@
 /**************************************************************
 * Typography
 ***************************************************************
-*/ 
-.sticky-container {
+*/
+:root {
   --font-baloo: "Baloo Chettan 2", "Consolas", "Monaco", "Andale Mono", "Ubuntu Mono", monospace;
   --font-ostwald: "Oswald", "Impact", "Roboto Condensed", arial, sans-serif;
+  --font-raleway: "Raleway", "Open Sans", Tahoma, "Geneva", Arial, sans-serif;
+
+  // font-size
+  --font-size-small: 1rem;
+  --font-size-medium: 1.1rem;
+  --font-size-large: 1.2rem;
+
+  // headers font size
+  --font-size-title-small: 2rem;
+  --font-size-title-medium: 2.5rem;
+  --font-size-title-large: 3rem;
+
+
+
+  // line height
+  --line-height: 1.6;
+
+  // fornt weight
+  --font-weight-normal: 400;
+  --font-weight-semibold: 600;
+
+  // margins 
+  --gutter: 1em;
+  --gutter-big: 1.5em;
+
+  --gutter-between: var(--gutter) 0 var(--gutter-big) 0;
+}
+
+
+
+body {
+  font: normal normal var(--font-weight-normal) var(--font-size-small)/var(--line-height) var(--font-raleway);
+  vertical-align: baseline;
+}
+
+a {
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+p {
+  margin: var(--gutter-between);
+}
+
+ul,
+li {
+  list-style: none;
 }
 
 .sticky-main {
@@ -14,24 +64,35 @@
 .sticky-footer p,
 .sticky-header h3 {
   font-family: var(--font-baloo);
-  font-weight: 600;
-  font-size: 2rem;
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-title-small);
   text-align: center;
+  margin: 0;
 }
 
 
+@include media-query-up (small) {}
+
 @include media-query-up (medium) {
+
+  body {
+    font-size: var(--font-size-medium);
+  }
 
   .sticky-footer p,
   .sticky-header h3 {
-    font-size: 2.5rem;
+    font-size: var(--font-size-title-medium);
   }
 }
 
 @include media-query-up (large) {
 
+  body {
+    font-size: var(--font-size-large);
+  }
+
   .sticky-footer p,
   .sticky-header h3 {
-    font-size: 3rem;
+    font-size: var(--font-size-title-large);
   }
 }
